@@ -8,3 +8,7 @@ provider "google" {
 resource "google_compute_network" "vpc_network" {
   name = "my-vpc-network"
 }
+
+output "nw" {
+  value = google_compute_network.vpc_network.name
+}
